@@ -1,0 +1,414 @@
+URL to view log online:
+https://source.eait.uq.edu.au/viewvc/csse2310-sem1-s4531620/trunk/a3/?view=log
+
+Retrieving logs at Fri May 5 00:16:44 AEST 2023
+------------------------------------------------------------------------
+r1 | uqpsutto | 2023-03-01 20:45:07 +1000 (Wed, 01 Mar 2023) | 1 line
+Changed paths:
+   A /play
+   A /prac
+   A /trunk
+   A /trunk/a1
+   A /trunk/a3
+   A /trunk/a4
+
+Initial repository structure
+
+
+------------------------------------------------------------------------
+r2 | s4531620 | 2023-03-02 11:59:49 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /play
+   M /prac
+   M /trunk
+   M /trunk/a1
+   M /trunk/a3
+   M /trunk/a4
+
+Somehow svn reported changes to original files
+
+Index: .
+--- .	(revision 1)
++++ .	(revision 2)
+
+Property changes on: .
+___________________________________________________________________
+Added: svn:ignore
+## -0,0 +1,3 ##
++README.md
++csse2310.code-workspace
++lectures
+
+------------------------------------------------------------------------
+r5 | s4531620 | 2023-03-02 12:14:55 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /play
+   M /prac
+   M /prac/w2
+   M /prac/w3
+   M /trunk
+   M /trunk/a1
+   M /trunk/a3
+   M /trunk/a4
+
+Updated svn:ignores
+
+Index: .
+--- .	(revision 4)
++++ .	(revision 5)
+
+Property changes on: .
+___________________________________________________________________
+Modified: svn:ignore
+## -1,3 +1 ##
+-README.md
+-csse2310.code-workspace
+-lectures
++*.out
+
+------------------------------------------------------------------------
+r26 | s4531620 | 2023-04-29 16:08:49 +1000 (Sat, 29 Apr 2023) | 1 line
+Changed paths:
+   M /play
+   M /trunk/a3
+   A /trunk/a3/Makefile
+   A /trunk/a3/testuqwordiply.c
+
+Added a1 code to a3 folder as starting boilerplate
+
+Index: Makefile
+ Makefile |   19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+Index: testuqwordiply.c
+ testuqwordiply.c |  489 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 489 insertions(+)
+Index: .
+--- .	(revision 25)
++++ .	(revision 26)
+
+Property changes on: .
+___________________________________________________________________
+Modified: svn:ignore
+## -1 +1,2 ##
+ *.out
++testuqwordiply
+
+------------------------------------------------------------------------
+r27 | s4531620 | 2023-04-30 17:27:33 +1000 (Sun, 30 Apr 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Layed out functions from architecture plan. Added some pseudocoded functionality
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  573 ++++++++++++++-----------------------------------------
+ 1 file changed, 147 insertions(+), 426 deletions(-)
+
+------------------------------------------------------------------------
+r28 | s4531620 | 2023-05-01 11:35:04 +1000 (Mon, 01 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Added argument parsing using getopt()
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   67 ++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 62 insertions(+), 5 deletions(-)
+
+------------------------------------------------------------------------
+r29 | s4531620 | 2023-05-01 11:48:30 +1000 (Mon, 01 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Finalised and cleanup-ed args parse to be in line with spec error cases
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   38 ++++++++++++++++----------------------
+ 1 file changed, 16 insertions(+), 22 deletions(-)
+
+------------------------------------------------------------------------
+r30 | s4531620 | 2023-05-01 14:50:32 +1000 (Mon, 01 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/Makefile
+   M /trunk/a3/testuqwordiply.c
+
+Implemented most of jobfiel reading and jobstruct list forming
+
+Index: Makefile
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Index: testuqwordiply.c
+ testuqwordiply.c |  112 ++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 86 insertions(+), 26 deletions(-)
+
+------------------------------------------------------------------------
+r31 | s4531620 | 2023-05-01 21:34:38 +1000 (Mon, 01 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed the deallocation issues with JobSpec struct array and their member strings
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   47 ++++++++++++++++++++---------------------------
+ 1 file changed, 20 insertions(+), 27 deletions(-)
+
+------------------------------------------------------------------------
+r32 | s4531620 | 2023-05-02 00:00:55 +1000 (Tue, 02 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Imlpemented child execing with partly broken piping system
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  205 ++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 159 insertions(+), 46 deletions(-)
+
+------------------------------------------------------------------------
+r33 | s4531620 | 2023-05-02 18:47:07 +1000 (Tue, 02 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Partially woking pipe network
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   70 ++++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 51 insertions(+), 19 deletions(-)
+
+------------------------------------------------------------------------
+r34 | s4531620 | 2023-05-03 10:26:34 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Got both test and demo programs redirecting output to outfiles but one is cannibalising all the data from inputFd shared with the other
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   51 +++++++++++++++++++++++++++++----------------------
+ 1 file changed, 29 insertions(+), 22 deletions(-)
+
+------------------------------------------------------------------------
+r35 | s4531620 | 2023-05-03 10:39:10 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Got both test and demo taking input and sucessfully passing tocmp
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   26 +++++++++++++++++---------
+ 1 file changed, 17 insertions(+), 9 deletions(-)
+
+------------------------------------------------------------------------
+r36 | s4531620 | 2023-05-03 14:49:51 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Yayyyyyy. Fixed my massive fd tomfoolery.
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  220 +++++++++++++++++++++++++++----------------------------
+ 1 file changed, 110 insertions(+), 110 deletions(-)
+
+------------------------------------------------------------------------
+r37 | s4531620 | 2023-05-03 15:05:55 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/Makefile
+   M /trunk/a3/testuqwordiply.c
+
+Finalised working pipe setup and runJob() function. Also cleanup.
+
+Index: Makefile
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Index: testuqwordiply.c
+ testuqwordiply.c |   28 +++++++++-------------------
+ 1 file changed, 9 insertions(+), 19 deletions(-)
+
+------------------------------------------------------------------------
+r38 | s4531620 | 2023-05-03 15:07:00 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/Makefile
+
+Fixed breaking makefile formatting bug
+
+Index: Makefile
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+------------------------------------------------------------------------
+r39 | s4531620 | 2023-05-03 15:38:32 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed jobtest parsing so that all error boundaries are in line with spec.
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   64 +++++++++++++++++++++++++++++++++++--------------------
+ 1 file changed, 41 insertions(+), 23 deletions(-)
+
+------------------------------------------------------------------------
+r40 | s4531620 | 2023-05-03 16:58:33 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Created unit testing framework for input args
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   99 +++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 60 insertions(+), 39 deletions(-)
+
+------------------------------------------------------------------------
+r41 | s4531620 | 2023-05-03 20:23:32 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Updated to arg parsing to pass most testa3.sh command line tests
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   37 +++++++++++++++----------------------
+ 1 file changed, 15 insertions(+), 22 deletions(-)
+
+------------------------------------------------------------------------
+r42 | s4531620 | 2023-05-03 21:18:59 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed most style issues
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  167 ++++++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 98 insertions(+), 69 deletions(-)
+
+------------------------------------------------------------------------
+r43 | s4531620 | 2023-05-03 22:25:04 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Added quiet mode and fixed uqcmp prefix
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   81 +++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 46 insertions(+), 35 deletions(-)
+
+------------------------------------------------------------------------
+r44 | s4531620 | 2023-05-03 23:59:30 +1000 (Wed, 03 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Implemented returning of runJob() status codes
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   78 +++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 48 insertions(+), 30 deletions(-)
+
+------------------------------------------------------------------------
+r45 | s4531620 | 2023-05-04 00:42:34 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Implemented the result reporting for individual tests
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  137 +++++++++++++++++++++++++++++++++++++------------------
+ 1 file changed, 94 insertions(+), 43 deletions(-)
+
+------------------------------------------------------------------------
+r46 | s4531620 | 2023-05-04 09:30:14 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Added reporting of overall results at end
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   41 ++++++++++++++++++++++++++++++-----------
+ 1 file changed, 30 insertions(+), 11 deletions(-)
+
+------------------------------------------------------------------------
+r47 | s4531620 | 2023-05-04 09:41:47 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Added all test passed/not exit status reoprting
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   39 +++++++++++++++++++++------------------
+ 1 file changed, 21 insertions(+), 18 deletions(-)
+
+------------------------------------------------------------------------
+r48 | s4531620 | 2023-05-04 09:51:49 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Added freeing of jobs list and dynamic child pis and results lists
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+------------------------------------------------------------------------
+r49 | s4531620 | 2023-05-04 11:28:39 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed child process status checking or EXIT_DIFF and EXEC_FAIL errors
+
+Index: testuqwordiply.c
+ testuqwordiply.c |  165 +++++++++++++++++++++++++++++++------------------------
+ 1 file changed, 95 insertions(+), 70 deletions(-)
+
+------------------------------------------------------------------------
+r50 | s4531620 | 2023-05-04 11:37:42 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Removed extraneous print statements
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+------------------------------------------------------------------------
+r51 | s4531620 | 2023-05-04 20:56:59 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed "Starting job X" being printed after fork causing wrong order (test 7.2)
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   50 +++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 43 insertions(+), 7 deletions(-)
+
+------------------------------------------------------------------------
+r52 | s4531620 | 2023-05-04 22:06:39 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Fixed error with not closing inputFds (test 4.1)
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   46 +++++++++++++++++++++++++++++-----------------
+ 1 file changed, 29 insertions(+), 17 deletions(-)
+
+------------------------------------------------------------------------
+r53 | s4531620 | 2023-05-04 22:50:54 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Code cleaup
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+
+------------------------------------------------------------------------
+r54 | s4531620 | 2023-05-04 22:56:56 +1000 (Thu, 04 May 2023) | 1 line
+Changed paths:
+   M /trunk/a3/testuqwordiply.c
+
+Code cleanup
+
+Index: testuqwordiply.c
+ testuqwordiply.c |   47 ++++++++++-------------------------------------
+ 1 file changed, 10 insertions(+), 37 deletions(-)
+
+------------------------------------------------------------------------

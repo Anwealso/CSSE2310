@@ -1,0 +1,262 @@
+URL to view log online:
+https://source.eait.uq.edu.au/viewvc/csse2310-sem1-s4531620/trunk/a1/?view=log
+
+Retrieving logs at Thu Mar 23 19:54:52 AEST 2023
+------------------------------------------------------------------------
+r1 | uqpsutto | 2023-03-01 20:45:07 +1000 (Wed, 01 Mar 2023) | 1 line
+Changed paths:
+   A /play
+   A /prac
+   A /trunk
+   A /trunk/a1
+   A /trunk/a3
+   A /trunk/a4
+
+Initial repository structure
+
+
+------------------------------------------------------------------------
+r2 | s4531620 | 2023-03-02 11:59:49 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /play
+   M /prac
+   M /trunk
+   M /trunk/a1
+   M /trunk/a3
+   M /trunk/a4
+
+Somehow svn reported changes to original files
+
+Index: .
+--- .	(revision 1)
++++ .	(revision 2)
+
+Property changes on: .
+___________________________________________________________________
+Added: svn:ignore
+## -0,0 +1,3 ##
++README.md
++csse2310.code-workspace
++lectures
+
+------------------------------------------------------------------------
+r3 | s4531620 | 2023-03-02 12:01:59 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   A /prac/w2
+   A /prac/w3
+   A /trunk/a1/tictactoe.c
+
+Added assingment 1 test files and created folers for upcoming pracs
+
+Index: tictactoe.c
+ tictactoe.c |  174 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 174 insertions(+)
+
+------------------------------------------------------------------------
+r5 | s4531620 | 2023-03-02 12:14:55 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /play
+   M /prac
+   M /prac/w2
+   M /prac/w3
+   M /trunk
+   M /trunk/a1
+   M /trunk/a3
+   M /trunk/a4
+
+Updated svn:ignores
+
+Index: .
+--- .	(revision 4)
++++ .	(revision 5)
+
+Property changes on: .
+___________________________________________________________________
+Modified: svn:ignore
+## -1,3 +1 ##
+-README.md
+-csse2310.code-workspace
+-lectures
++*.out
+
+------------------------------------------------------------------------
+r9 | s4531620 | 2023-03-02 12:23:37 +1000 (Thu, 02 Mar 2023) | 1 line
+Changed paths:
+   A /trunk/a1/Makefile
+
+Added empty makefile
+
+Index: Makefile
+ 0 files changed
+
+------------------------------------------------------------------------
+r10 | s4531620 | 2023-03-04 15:37:05 +1000 (Sat, 04 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/Makefile
+   A /trunk/a1/dictionary.txt
+   D /trunk/a1/tictactoe.c
+   A /trunk/a1/uqwordiply.c
+
+Added basic makefile and program structure scaffolding for a1
+
+Index: tictactoe.c (deleted)
+Index: Makefile
+ Makefile |    2 ++
+ 1 file changed, 2 insertions(+)
+Index: dictionary.txt
+ dictionary.txt |  604 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 604 insertions(+)
+Index: uqwordiply.c
+ uqwordiply.c |   38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+
+------------------------------------------------------------------------
+r11 | s4531620 | 2023-03-04 15:47:19 +1000 (Sat, 04 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1
+
+Ignored a1 executable
+
+Index: .
+--- .	(revision 10)
++++ .	(revision 11)
+
+Property changes on: .
+___________________________________________________________________
+Modified: svn:ignore
+## -1 +1,2 ##
+ *.out
++uqwordiply
+
+------------------------------------------------------------------------
+r12 | s4531620 | 2023-03-04 17:19:46 +1000 (Sat, 04 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /trunk/a1/Makefile
+   M /trunk/a1/uqwordiply.c
+
+Fleshed out makefile and layed out main loop procedure
+
+Index: Makefile
+ Makefile |   21 +++++++++++++++++++--
+ 1 file changed, 19 insertions(+), 2 deletions(-)
+Index: uqwordiply.c
+ uqwordiply.c |  123 +++++++++++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 108 insertions(+), 15 deletions(-)
+
+------------------------------------------------------------------------
+r13 | s4531620 | 2023-03-04 18:14:24 +1000 (Sat, 04 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Implemented argument checking function
+
+Index: uqwordiply.c
+ uqwordiply.c |   92 ++++++++++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 82 insertions(+), 10 deletions(-)
+
+------------------------------------------------------------------------
+r14 | s4531620 | 2023-03-05 08:45:20 +1000 (Sun, 05 Mar 2023) | 1 line
+Changed paths:
+   M /
+   M /trunk/a1/Makefile
+   M /trunk/a1/uqwordiply.c
+
+Fixed incredibly painful null pointer dereferencing error in get_starter_word()
+
+Index: Makefile
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Index: uqwordiply.c
+ uqwordiply.c |   91 ++++++++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 62 insertions(+), 29 deletions(-)
+
+------------------------------------------------------------------------
+r15 | s4531620 | 2023-03-05 09:56:04 +1000 (Sun, 05 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Implemented loading of dictionary
+
+Index: uqwordiply.c
+ uqwordiply.c |   71 +++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 64 insertions(+), 7 deletions(-)
+
+------------------------------------------------------------------------
+r16 | s4531620 | 2023-03-05 10:32:16 +1000 (Sun, 05 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Implemented checking of valid starting word and upper case conversion of starter word and dictionary
+
+Index: uqwordiply.c
+ uqwordiply.c |   96 ++++++++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 66 insertions(+), 30 deletions(-)
+
+------------------------------------------------------------------------
+r17 | s4531620 | 2023-03-05 12:19:18 +1000 (Sun, 05 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Implemented guess getting and checking of guess against error cases
+
+Index: uqwordiply.c
+ uqwordiply.c |  177 ++++++++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 122 insertions(+), 55 deletions(-)
+
+------------------------------------------------------------------------
+r18 | s4531620 | 2023-03-05 12:45:57 +1000 (Sun, 05 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Implemented getting of total length and longestguessed words
+
+Index: uqwordiply.c
+ uqwordiply.c |  127 ++++++++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 87 insertions(+), 40 deletions(-)
+
+------------------------------------------------------------------------
+r19 | s4531620 | 2023-03-07 16:32:46 +1000 (Tue, 07 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Finally fixed memory leak in dictionary longest word checking function
+
+Index: uqwordiply.c
+ uqwordiply.c |  118 ++++++++++++++++++++++++++++++++++++++++++++++-------------
+ 1 file changed, 92 insertions(+), 26 deletions(-)
+
+------------------------------------------------------------------------
+r20 | s4531620 | 2023-03-07 16:43:57 +1000 (Tue, 07 Mar 2023) | 1 line
+Changed paths:
+   D /trunk/a1/dictionary.txt
+
+Removed test dictionary
+
+Index: dictionary.txt (deleted)
+
+------------------------------------------------------------------------
+r21 | s4531620 | 2023-03-23 19:31:58 +1000 (Thu, 23 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Update tweaks to pass final tests
+
+Index: uqwordiply.c
+ uqwordiply.c |  423 +++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 214 insertions(+), 209 deletions(-)
+
+------------------------------------------------------------------------
+r22 | s4531620 | 2023-03-23 19:34:40 +1000 (Thu, 23 Mar 2023) | 1 line
+Changed paths:
+   M /trunk/a1/uqwordiply.c
+
+Fixed style renaming issues
+
+Index: uqwordiply.c
+ uqwordiply.c |   14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+------------------------------------------------------------------------

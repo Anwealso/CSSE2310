@@ -1,0 +1,94 @@
+{
+  "git.suggestSmartCommit": false,
+  "workbench.iconTheme": "vscode-icons-mac",
+  "git.confirmSync": false,
+  "workbench.colorTheme": "Darcula",
+  "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.minimap.size": "fit",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "python.pythonPath": "/opt/anaconda3/bin/python",
+  "workbench.startupEditor": "newUntitledFile",
+  "git.ignoreLegacyWarning": true,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      // {
+      //     // For all files
+      //     "match": ".*",
+      //     "isAsync": true,
+      //     "cmd": "echo 'I run for all files.'"
+      // },
+      {
+        // For c files
+        "match": "\\.c$",
+        "cmd": "make; make flash"
+      }
+    ]
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.codeActionsOnSave": null,
+  "editor.wrappingIndent": "indent",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "idf.espIdfPath": "/Users/alexnicholson/esp/esp-idf",
+  "idf.pythonBinPath": "/Users/alexnicholson/.espressif/python_env/idf3.3_py3.7_env/bin/python",
+  "idf.customExtraPaths": "/Users/alexnicholson/.espressif/tools/xtensa-esp32-elf/1.22.0-97-gc752ad5-5.2.0/xtensa-esp32-elf/bin:/Users/alexnicholson/.espressif/tools/esp32ulp-elf/2.28.51.20170517/esp32ulp-elf-binutils/bin:/Users/alexnicholson/.espressif/tools/openocd-esp32/v0.10.0-esp32-20200709/openocd-esp32/bin",
+  "idf.customExtraVars": "{\"OPENOCD_SCRIPTS\":\"/Users/alexnicholson/.espressif/tools/openocd-esp32/v0.10.0-esp32-20200709/openocd-esp32/share/openocd/scripts\"}",
+  "idf.flashType": "UART",
+  "python.defaultInterpreterPath": "~/opt/anaconda3/bin/python",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editor.untitled.hint": "hidden",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "jupyter.askForKernelRestart": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "editor.minimap.showSlider": "always",
+  "git.path": "",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.showReleaseNotes": false,
+  "arduino.useArduinoCli": true,
+  "svn.conflicts.autoResolve": true,
+  "svn.delete.actionForDeletedFiles": "remove",
+  "svn.sourceControl.ignore": [],
+  "makefile.makefilePath": "trunk/a4/Makefile",
+  "debug.onTaskErrors": "showErrors",
+  "prettier.configPath": ".prettierrc",
+  "C_Cpp.codeAnalysis.clangTidy.headerFilter": "",
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "C_Cpp.formatting": "vcFormat",
+  "editor.rulers": [
+    79
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "workbench.activityBar.visible": false,
+  "editor.foldingStrategy": "indentation",
+  "remote.SSH.remotePlatform": {
+    "moss.labs.eait.uq.edu.au": "linux"
+  },
+  "C_Cpp.default.enableConfigurationSquiggles": false,
+}
